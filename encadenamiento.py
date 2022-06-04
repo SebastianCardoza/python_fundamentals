@@ -9,8 +9,10 @@ class User:
         print(f"Hello mah bro, my name is {self.name}")
     def deposito(self, amount):
         self.balance += amount
+        return self
     def hacer_retiro(self, amount):
         self.balance -= amount
+        return self
     def mostrar_balance(self):
         print(f"Usuario: {self.name}, Balance: {self.balance}$")
     def transfer(self, other_user, amount):
