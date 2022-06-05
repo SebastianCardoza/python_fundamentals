@@ -1,4 +1,8 @@
-def queFue(name="bandido", repeat=2):
-    print(f"que fue {name} \n" * repeat)
-
-queFue("sebastian", 1)
+class Padre:
+    def method_a(self):
+        print("invocando método_a PADRE")
+class Hijo(Padre):
+    def method_a(self):
+        print("invocando método_a HIJO")
+papá = Padre()
+hijo = Hijo()

@@ -50,9 +50,10 @@ class CuentaBancaria:
             self.balance += self.balance*self.tasa_int
         return self
 
-sebastian=CuentaBancaria(0.01, 100)
-daniel=CuentaBancaria(0.02, 200)
+if __name__ == "__main__":
+    sebastian=CuentaBancaria(0.01, 100)
+    daniel=CuentaBancaria(0.02, 200)
 
-sebastian.deposito(50).deposito(50).deposito(50).retiro(50).generar_interes().mostrar_balance()
-daniel.deposito(300).deposito(300).retiro(50).retiro(50).retiro(50).retiro(50).generar_interes().mostrar_balance()
-CuentaBancaria.mostrar_balances()
+    sebastian.deposito(50).deposito(50).deposito(50).retiro(50).generar_interes().mostrar_balance()
+    daniel.deposito(300).deposito(300).retiro(50).retiro(50).retiro(50).retiro(50).generar_interes().mostrar_balance()
+    CuentaBancaria.mostrar_balances()
