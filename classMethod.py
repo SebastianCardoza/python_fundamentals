@@ -29,6 +29,8 @@ class CuentaBancaria:
     def puede_retirar(balance, amount):
         if balance - amount >= 0:
             return True
+
+        print("FONDOS INSUFICIENTES")
         return False
 
     def deposito(self, amount):
