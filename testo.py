@@ -1,8 +1,15 @@
-class Padre:
-    def method_a(self):
-        print("invocando método_a PADRE")
-class Hijo(Padre):
-    def method_a(self):
-        print("invocando método_a HIJO")
-papá = Padre()
-hijo = Hijo()
+def contadorLetras(palabra):
+    result={}
+    for letra in palabra:
+        result[letra]=0
+
+    for letra in palabra:
+        for key in result.keys():
+            if letra == key:
+                result[letra] += 1
+                continue
+    
+    print(result)
+    
+
+contadorLetras("momomol")
